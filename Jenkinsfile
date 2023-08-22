@@ -11,6 +11,7 @@ pipeline {
 
         stage('BUILD') {
             steps {
+                tool name: 'MAVEN3', type: 'hudson.tasks.Maven'
                 sh 'mvn clean install -DskipTests'
             }
             post {
